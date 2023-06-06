@@ -25,7 +25,7 @@ class StringHandler implements URLHandler {
     }
     else if(url.getPath().equals("/save")) {
       String toSave = String.join("\n", lines) + "\n";
-      Files.write(Paths.get(this.path), toSave.getBytes());
+      Files.write(Paths.get("some/other/file.txt"), toSave.getBytes());
       return "Saved!\n";
     }
     else if(url.getPath().equals("/search")) {
